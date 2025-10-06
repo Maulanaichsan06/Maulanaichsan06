@@ -2,6 +2,9 @@ import React, { useState } from "react";
 import { ArrowUpRight, Code } from "lucide-react";
 import LazyImage from "./LazyImage";
 
+// ✅ Import gambar langsung (biar Webpack/Vite beneran include file-nya)
+import logo from "../assets/logo.jpg";
+
 const Projects = () => {
   const [activeFilter, setActiveFilter] = useState("All");
 
@@ -11,21 +14,21 @@ const Projects = () => {
     {
       title: "Enterprise E-commerce",
       description: "AI-powered shopping platform with real-time analytics",
-      image: "/src/assets/logo.jpg",
+      image: logo,
       category: "Web",
       technologies: ["React", "Node.js", "AWS"],
     },
     {
       title: "FinTech Mobile App",
       description: "Next-gen banking with biometric authentication",
-      image: "/src/assets/logo.jpg",
+      image: logo,
       category: "Mobile",
       technologies: ["React Native", "Firebase"],
     },
     {
       title: "Cloud Migration",
       description: "Large-scale infrastructure transformation",
-      image: "/src/assets/logo.jpg",
+      image: logo,
       category: "Cloud",
       technologies: ["AWS", "Kubernetes"],
     },
