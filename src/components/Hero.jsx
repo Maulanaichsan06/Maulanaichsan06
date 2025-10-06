@@ -1,6 +1,7 @@
 import React from "react";
 import { ArrowDownCircle, PlayCircle } from "lucide-react";
-import profileImg from "../assets/logo.jpg"; // ganti sesuai path gambarmu
+import profileImg from "../assets/logo.jpg";
+import cvFile from "../assets/cvmaulanaichsan.pdf"; // ⬅️ import CV kamu di sini
 
 const Hero = () => {
   return (
@@ -29,7 +30,7 @@ const Hero = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start pt-4">
             {/* Tombol Download CV */}
             <a
-              href="/cvmaulanaichsan.pdf" // ganti dengan path CV kamu, misalnya "/assets/CV-Maulana.pdf"
+              href={cvFile} // ✅ pakai variabel hasil import
               download
               className="px-8 py-3 bg-blue-600 text-white font-medium rounded-full hover:bg-blue-500 transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2"
             >
@@ -38,7 +39,7 @@ const Hero = () => {
 
             {/* Tombol Lihat Proyek */}
             <a
-              href="/fullprojects" // ganti dengan link proyek kamu
+              href="/fullprojects"
               className="px-8 py-3 border border-blue-500 text-blue-400 font-medium rounded-full hover:bg-blue-500 hover:text-white transition-all duration-300 flex items-center justify-center gap-2"
             >
               Lihat Proyek <PlayCircle size={18} />
