@@ -32,14 +32,14 @@ const Projects = () => {
     {
       title: "Social Media Dashboard",
       description: "Real-time insights and analytics for social campaigns",
-      image: "/src/assets/logo.jpg",
+      image: "/assets/logo.jpg",
       category: "Web",
       technologies: ["Vue.js", "Node.js", "MongoDB"],
     },
     {
       title: "Healthcare Tracker App",
       description: "Monitor patient health metrics remotely",
-      image: "/src/assets/logo.jpg",
+      image: "/assets/logo.jpg",
       category: "Mobile",
       technologies: ["Flutter", "Firebase"],
     },
@@ -60,14 +60,14 @@ const Projects = () => {
     {
       title: "Fitness Mobile App",
       description: "Track workouts and progress with smart notifications",
-      image: "/src/assets/logo.jpg",
+      image: "/assets/logo.jpg",
       category: "Mobile",
       technologies: ["React Native", "GraphQL"],
     },
     {
       title: "Data Lake Setup",
       description: "Centralized storage for big data analytics",
-      image: "/src/assets/logo.jpg",
+      image: "/assets/logo.jpg",
       category: "Cloud",
       technologies: ["AWS S3", "Athena"],
     },
@@ -76,7 +76,6 @@ const Projects = () => {
   return (
     <section className="relative py-28 bg-black text-white">
       <div className="max-w-6xl mx-auto px-6 text-center">
-        {/* Judul dan paragraf */}
         <h2 className="text-3xl md:text-4xl font-bold mb-4">
           <span className="text-blue-500">Project</span> Saya
         </h2>
@@ -86,7 +85,6 @@ const Projects = () => {
           modern.
         </p>
 
-        {/* Filter kategori */}
         <div className="flex flex-wrap justify-center gap-4 mb-14">
           {categories.map((category) => (
             <button
@@ -103,7 +101,6 @@ const Projects = () => {
           ))}
         </div>
 
-        {/* Grid proyek */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
           {projects
             .filter(
@@ -134,7 +131,6 @@ const Projects = () => {
                     {project.description}
                   </p>
 
-                  {/* Technologies */}
                   <div className="flex flex-wrap gap-2 mb-6">
                     {project.technologies.map((tech, idx) => (
                       <span

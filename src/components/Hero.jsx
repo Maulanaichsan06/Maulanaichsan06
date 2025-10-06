@@ -29,7 +29,7 @@ const Hero = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start pt-4">
             {/* Tombol Download CV */}
             <a
-              href="/CV_MAULANA_ICHSAN.pdf" // ganti dengan path CV kamu, misalnya "/assets/CV-Maulana.pdf"
+              href="/cvmaulanaichsan.pdf" // ganti dengan path CV kamu, misalnya "/assets/CV-Maulana.pdf"
               download
               className="px-8 py-3 bg-blue-600 text-white font-medium rounded-full hover:bg-blue-500 transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2"
             >

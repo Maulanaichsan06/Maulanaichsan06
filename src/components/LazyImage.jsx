@@ -1,8 +1,9 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 
 const LazyImage = ({ src, alt, className }) => {
   const [imageSrc, setImageSrc] = useState(null);
   const [isVisible, setIsVisible] = useState(false);
+  const imgRef = useRef(null);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -20,13 +21,12 @@ const LazyImage = ({ src, alt, className }) => {
       }
     );
 
-    const element = document.querySelector(`img[data-src="${src}"]`);
-    if (element) observer.observe(element);
+    if (imgRef.current) observer.observe(imgRef.current);
 
     return () => {
-      observer.disconnect();
+      if (imgRef.current) observer.unobserve(imgRef.current);
     };
-  }, [src]);
+  }, []);
 
   useEffect(() => {
     if (isVisible) {
@@ -36,9 +36,10 @@ const LazyImage = ({ src, alt, className }) => {
 
   return (
     <img
-      data-src={src}
+      ref={imgRef}
       src={imageSrc}
       alt={alt}
+      loading="lazy"
       className={`transition-opacity duration-500 ease-in-out ${
         imageSrc ? "opacity-100" : "opacity-0"
       } ${className}`}
