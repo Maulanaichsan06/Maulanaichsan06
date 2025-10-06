@@ -11,21 +11,21 @@ const Projects = () => {
     {
       title: "Enterprise E-commerce",
       description: "AI-powered shopping platform with real-time analytics",
-      image: "/src/assets/logo.jpg",
+      image: "/assets/logo.jpg",
       category: "Web",
       technologies: ["React", "Node.js", "AWS"],
     },
     {
       title: "FinTech Mobile App",
       description: "Next-gen banking with biometric authentication",
-      image: "/src/assets/logo.jpg",
+      image: "/assets/logo.jpg",
       category: "Mobile",
       technologies: ["React Native", "Firebase"],
     },
     {
       title: "Cloud Migration",
       description: "Large-scale infrastructure transformation",
-      image: "/src/assets/logo.jpg",
+      image: "/assets/logo.jpg",
       category: "Cloud",
       technologies: ["AWS", "Kubernetes"],
     },
@@ -53,7 +53,7 @@ const Projects = () => {
     {
       title: "Portfolio Website",
       description: "Personal website with interactive UI",
-      image: "/src/assets/logo.jpg",
+      image: "/assets/logo.jpg",
       category: "Web",
       technologies: ["React", "Tailwind CSS"],
     },
