@@ -2,6 +2,9 @@ import React, { useState } from "react";
 import { ArrowUpRight, Code } from "lucide-react";
 import LazyImage from "./LazyImage";
 
+// 🔹 Import gambar langsung dari folder assets
+import Logo from "../assets/logo.jpg";
+
 const Projects = () => {
   const [activeFilter, setActiveFilter] = useState("All");
 
@@ -11,63 +14,63 @@ const Projects = () => {
     {
       title: "Enterprise E-commerce",
       description: "AI-powered shopping platform with real-time analytics",
-      image: "/assets/logo.jpg",
+      image: Logo,
       category: "Web",
       technologies: ["React", "Node.js", "AWS"],
     },
     {
       title: "FinTech Mobile App",
       description: "Next-gen banking with biometric authentication",
-      image: "/assets/logo.jpg",
+      image: Logo,
       category: "Mobile",
       technologies: ["React Native", "Firebase"],
     },
     {
       title: "Cloud Migration",
       description: "Large-scale infrastructure transformation",
-      image: "/assets/logo.jpg",
+      image: Logo,
       category: "Cloud",
       technologies: ["AWS", "Kubernetes"],
     },
     {
       title: "Social Media Dashboard",
       description: "Real-time insights and analytics for social campaigns",
-      image: "/assets/logo.jpg",
+      image: Logo,
       category: "Web",
       technologies: ["Vue.js", "Node.js", "MongoDB"],
     },
     {
       title: "Healthcare Tracker App",
       description: "Monitor patient health metrics remotely",
-      image: "/assets/logo.jpg",
+      image: Logo,
       category: "Mobile",
       technologies: ["Flutter", "Firebase"],
     },
     {
       title: "Serverless API",
       description: "Highly scalable API using serverless architecture",
-      image: "/src/assets/logo.jpg",
+      image: Logo,
       category: "Cloud",
       technologies: ["AWS Lambda", "API Gateway"],
     },
     {
       title: "Portfolio Website",
       description: "Personal website with interactive UI",
-      image: "/assets/logo.jpg",
+      image: Logo,
       category: "Web",
       technologies: ["React", "Tailwind CSS"],
     },
     {
       title: "Fitness Mobile App",
       description: "Track workouts and progress with smart notifications",
-      image: "/assets/logo.jpg",
+      image: Logo,
       category: "Mobile",
       technologies: ["React Native", "GraphQL"],
     },
     {
       title: "Data Lake Setup",
       description: "Centralized storage for big data analytics",
-      image: "/assets/logo.jpg",
+      image: Logo,
       category: "Cloud",
       technologies: ["AWS S3", "Athena"],
     },

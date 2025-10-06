@@ -2,40 +2,43 @@ import React, { useState } from "react";
 import { ArrowUpRight, GraduationCap, Briefcase, Award } from "lucide-react";
 import LazyImage from "./LazyImage";
 
+// 🔹 Import gambar dari assets
+import Logo from "../assets/logo.jpg";
+
 const Experience = () => {
   const [activeFilter, setActiveFilter] = useState("All");
 
   const categories = ["All", "Pendidikan", "Pengalaman", "Sertifikat"];
 
+  // === PENDIDIKAN ===
   const data = [
-    // === PENDIDIKAN ===
     {
       title: "Sekolah Dasar Negeri 1 Purwojati",
       description: "Belajar dasar akademik dan pembentukan karakter.",
-      image: "/src/assets/logo.jpg",
+      image: Logo,
       category: "Pendidikan",
       year: "2009 - 2015",
     },
     {
       title: "MTS Ma'arif NU 1 Purwojati",
       description: "Mulai aktif di kegiatan OSIS dan lomba desain poster.",
-      image: "/src/assets/logo.jpg",
+      image: Logo,
       category: "Pendidikan",
       year: "2015 - 2017",
     },
     {
       title: "SMK Karya Teknologi 2 Jatilawang",
-      description: "Jurusan Tekologi Laboratorium Medik.",
-      image: "/src/assets/logo.jpg",
+      description: "Jurusan Teknologi Laboratorium Medik.",
+      image: Logo,
       category: "Pendidikan",
       year: "2017 - 2020",
     },
     {
       title: "Universitas Muhammadiyah Purwokerto - Teknik Informatika",
       description: "Mendalami AI, UI/UX, dan pengembangan aplikasi full-stack.",
-      image: "/src/assets/logo.jpg",
+      image: Logo,
       category: "Pendidikan",
-      year: " September 2021 - Agustus 2025",
+      year: "September 2021 - Agustus 2025",
     },
 
     // === PENGALAMAN ===
@@ -43,43 +46,42 @@ const Experience = () => {
       title: "Magang di PT Pusat Pelatihan Jakarta 119",
       description:
         "Mengerjakan proyek website company profile dan dashboard admin.",
-      image: "/src/assets/logo.jpg",
+      image: Logo,
       category: "Pengalaman",
       year: "2023",
     },
     {
       title: "Proyek Akhir Skripsi: Mengevaluasi Usability Aplikasi Presensi",
       description:
-        "Evaluasi Usability Aplikasi Presensi Mobile UMP Menggunakan Metode User Experience Questionnaire dan Think Aloud",
-      image: "/src/assets/logo.jpg",
+        "Evaluasi Usability Aplikasi Presensi Mobile UMP Menggunakan Metode User Experience Questionnaire dan Think Aloud.",
+      image: Logo,
       category: "Pengalaman",
       year: "2023",
     },
     {
       title:
         "Kerja Praktek - Freelance Wordpress Developer - PT Pusat Pelatihan Jakarta 119",
-      description:
-        "Membuat website profil untuk perusahaan untuk menarik para customers.",
-      image: "/src/assets/logo.jpg",
+      description: "Membuat website profil perusahaan untuk menarik pelanggan.",
+      image: Logo,
       category: "Pengalaman",
       year: "2024",
     },
   ];
 
-  // === SERTIFIKAT (hidden sampai diklik) ===
+  // === SERTIFIKAT ===
   const sertifikat = [
     {
       title: "Sertifikat UI/UX Design - Dicoding",
       description:
         "Mendalami konsep desain antarmuka modern dan prototyping dengan Figma.",
-      image: "/src/assets/logo.jpg  ",
+      image: Logo,
       category: "Sertifikat",
       year: "2023",
     },
     {
       title: "Sertifikat Full-Stack Web Developer",
       description: "Mempelajari backend dengan Node.js, Express, dan MongoDB.",
-      image: "/src/assets/logo.jpg",
+      image: Logo,
       category: "Sertifikat",
       year: "2024",
     },
@@ -87,7 +89,7 @@ const Experience = () => {
       title: "Sertifikat Machine Learning Dasar",
       description:
         "Pengenalan dasar algoritma dan model machine learning dengan Python.",
-      image: "/src/assets/logo.jpg",
+      image: Logo,
       category: "Sertifikat",
       year: "2024",
     },
@@ -97,12 +99,12 @@ const Experience = () => {
     activeFilter === "Sertifikat"
       ? sertifikat
       : activeFilter === "All"
-      ? data // sertifikat di-hide di sini
+      ? data
       : data.filter((item) => item.category === activeFilter);
 
   return (
     <section className="relative py-24 bg-black text-white">
-      {/* Efek gradasi biru di background */}
+      {/* Background gradasi biru */}
       <div className="absolute inset-0 -z-10">
         <div className="absolute w-full h-full">
           <div className="absolute top-0 -left-10 w-72 h-72 bg-blue-800 rounded-full mix-blend-multiply filter blur-3xl opacity-30" />
@@ -119,7 +121,6 @@ const Experience = () => {
               yang Membentuk Saya
             </span>
           </h2>
-
           <p className="mt-4 text-gray-400 max-w-2xl mx-auto">
             Sebuah perjalanan belajar, bekerja, dan berkembang di dunia
             teknologi.
